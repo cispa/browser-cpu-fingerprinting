@@ -1,0 +1,23 @@
+<!-- prettier-ignore -->
+
+{% extends "profiler.html" %}
+
+{% block headline %} Store Buffer Size {% endblock %} 
+
+{% block scripts %} {% load static %}
+<script src="{% static 'buffer/store.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/gh/AssemblyScript/wabt.js@1.0.23/index.js"></script>
+{% endblock %}
+<!-- prettier-ignore -->
+{% block text %} Here we will determine the size of the store buffer. {% endblock %}
+<!-- prettier-ignore -->
+{% block buttons %}
+<button
+  id="startButton"
+  type="button"
+  class="btn btn-primary btn-lg"
+  onclick="calculateStoreBufferSize(CanvasJS)"
+>
+  Start profiler
+</button>
+{% endblock %}

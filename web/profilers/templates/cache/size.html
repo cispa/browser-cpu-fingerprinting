@@ -1,0 +1,117 @@
+<!-- prettier-ignore -->
+
+{% extends "profiler.html" %}
+
+{% block headline %} Cache Sizes {% endblock %}
+
+{% block scripts %} {% load static %}
+<script src="{% static 'cache/cacheSize.js' %}"></script>
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block text %} 
+This benchmark will aim to reveal information about the data
+<a href="https://en.wikipedia.org/wiki/Cache_(computing)">cache</a>. In
+particular we are interested in the number of cache levels and the size of each
+level. Here we measure the time it takes to perform a randomized
+<a href="https://en.wikichip.org/wiki/pointer_chasing">pointer chase</a> of a
+fixed length. Each iteration the amount of memory the pointer chase iterates
+over is increased. When a cache level is satisfied, we expect a higher execution
+time the following iterations. An implementation of the same algorithm is
+explained in more detail
+<a href="https://github.com/afborchert/pointer-chasing">here</a>.
+<!-- prettier-ignore -->
+{% endblock %}
+
+<!-- prettier-ignore -->
+
+{% block buttons %}
+<button
+  id="startButton"
+  type="button"
+  class="btn btn-primary btn-lg"
+  onclick="calculateCacheSize(CanvasJS)"
+>
+  Start profiler
+</button>
+{% endblock %} {% block charts %}
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button
+      class="nav-link active"
+      id="nav-small-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-small"
+      type="button"
+      role="tab"
+      aria-controls="nav-small"
+      aria-selected="true"
+    >
+      Up to 512 KB
+    </button>
+    <button
+      class="nav-link"
+      id="nav-large-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-large"
+      type="button"
+      role="tab"
+      aria-controls="nav-large"
+      aria-selected="false"
+    >
+      512 KB upwards
+    </button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div
+    class="tab-pane fade show active"
+    id="nav-small"
+    role="tabpanel"
+    aria-labelledby="nav-small-tab"
+  >
+    <div
+      id="chartContainerSmall"
+      style="height: 50%; width: 100%; margin-top: 3rem"
+    ></div>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="nav-large"
+    role="tabpanel"
+    aria-labelledby="nav-large-tab"
+  >
+    <div
+      id="chartContainerLarge"
+      style="height: 50%; width: 100%; margin-top: 3rem"
+    ></div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block interpretation %}
+<h5>How to interpret these results.</h5>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, reiciendis
+  alias quis voluptas, accusamus recusandae quisquam ullam tenetur debitis
+  fugiat nesciunt deleniti enim sunt necessitatibus repellat quaerat expedita
+  officia itaque, asperiores dolores optio suscipit. Officiis, voluptates
+  reprehenderit est voluptas unde molestias a, rerum veritatis iusto similique
+  sequi praesentium, dolorem aut enim voluptatem pariatur corrupti quam adipisci
+  laboriosam explicabo exercitationem nesciunt? Quas corporis animi, mollitia,
+  odio quaerat error incidunt libero molestiae ipsum harum dolorem quibusdam
+  accusantium amet. Facilis, officiis quia exercitationem laborum dolor ab,
+  suscipit minima consequuntur perferendis ut at? Corrupti dicta ipsum eligendi
+  hic modi impedit aliquam error quia ipsam.
+</p>
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block sourcecode %}
+<p style="padding: 2rem">
+  The source code of this benchmark can be viewed
+  <a href="/static/cache/sizeFinder.js">here (JS)</a> and
+  <a href="/static/wasm/size.wat">here (WASM)</a>
+</p>
+{% endblock %}

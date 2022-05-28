@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>CPU-Profiler</title>
+    {% endblock %} {% load static %}
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'favicon.ico' %}"
+    />
+    <script src="{% static 'vendor/canvasjs/canvasjs.min.js' %}"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="padding-bottom: 120px; padding-top: 60px">
+    <div class="container">
+      <div class="container-lg" style="margin: 0, auto; padding: 1rem">
+        <h1 style="text-align: center">CPU-Profiler</h1>
+        <noscript>
+          <div
+            style="margin: 2rem; text-align: center"
+            class="alert alert-danger"
+            role="alert"
+          >
+            JavaScript is not enabled!
+          </div>
+        </noscript>
+        <!-- <div
+          style="margin: 2rem; text-align: center"
+          class="alert alert-warning"
+          role="alert"
+        >
+          Not all functionality has been implemented yet! This site is still
+          under heavy construction. 🔨
+        </div> -->
+        <p style="margin: 2rem">
+          This site will run a few JavaScript benchmarks to gather information
+          about your CPU. This results of these benchmarks will then be uploaded
+          to our server, where they are then stored in a database. Please click
+          <code>Continue</code> and follow the short instructions on the next
+          page. For more information check out the FAQ at the bottom.
+        </p>
+        <p style="padding-left: 2rem; padding-right: 2rem">
+          Our benchmarks are designed for the latest versions of
+          <strong>Firefox</strong> and <strong>Chrome</strong>-based browsers
+          (e.g. Google Chrome, Chromium, Microsoft Edge etc.). Most importantly
+          Safari and iOS devices are not supported.
+        </p>
+        <div
+          class="container"
+          style="display: flex; justify-content: center; margin-top: 4rem"
+          id="continuecontainer"
+        >
+          <button
+            type="button"
+            class="btn btn-lg"
+            onclick="document.location='/start'"
+            id="continuebutton"
+          >
+            Continue
+          </button>
+        </div>
+
+        <h3 style="text-align: center; padding-top: 8rem">FAQ</h3>
+        <div
+          class="accordion"
+          id="faqAccordion"
+          style="padding-left: 2rem; padding-right: 2rem; padding-top: 1rem"
+        >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Why are you doing this?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                These benchmarks evaluate the performance of your CPU in
+                different scenarios, which will provide graphs that each should
+                reveal a different piece of information about your CPU. We are
+                investigating, if the results obtained by our benchmarks suffice
+                to determine a concrete CPU model upon visiting a website, which
+                is interesting for different CPU-specific scenarios (e.g.
+                microarchitectural attacks like
+                <a href="https://spectreattack.com/">Spectre</a>).
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                What is information is targetted by your benchmarks?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <ul style="list-style-type: square">
+                  <li>
+                    Number of CPU
+                    <a href="https://en.wikipedia.org/wiki/Multi-core_processor"
+                      >cores</a
+                    >
+                  </li>
+                  <li>
+                    Single
+                    <a href="https://en.wikipedia.org/wiki/Multi-core_processor"
+                      >core</a
+                    >
+                    performance
+                  </li>
+                  <li>
+                    Multi
+                    <a
+                      href="https://en.wikipedia.org/wiki/Multi-core_processory"
+                      >core</a
+                    >
+                    performance
+                  </li>
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/Computer_memory"
+                      >Memory</a
+                    >
+                    latencies
+                  </li>
+                  <li>
+                    Data
+                    <a href="https://en.wikipedia.org/wiki/Cache_(computing)"
+                      >cache</a
+                    >
+                    sizes
+                  </li>
+                  <li>
+                    L1D
+                    <a href="https://en.wikipedia.org/wiki/Cache_(computing)"
+                      >cache</a
+                    >
+                    associativity
+                  </li>
+                  <li>
+                    L1D
+                    <a
+                      href="https://en.wikipedia.org/wiki/Translation_lookaside_buffer"
+                      >TLB</a
+                    >
+                    size
+                  </li>
+                  <li>
+                    <a
+                      href="https://en.wikipedia.org/wiki/Page_(computer_memory)"
+                      >Page</a
+                    >
+                    size
+                  </li>
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/Hyper-threading"
+                      >Hyper-threading</a
+                    >
+                    availability
+                  </li>
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/Cache_prefetching"
+                      >Data cache prefetcher</a
+                    >
+                    presence
+                  </li>
+                  <li>
+                    Load
+                    <a href="https://en.wikipedia.org/wiki/Data_buffer"
+                      >buffer</a
+                    >
+                    size
+                  </li>
+                  <li>
+                    <code>SharedArrayBuffer</code>-based timer precision (<a
+                      href="http://attacking.xyz/web/files/timers.pdf"
+                      >read more</a
+                    >)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo2"
+                aria-expanded="false"
+                aria-controls="collapseTwo2"
+              >
+                What will you upload and store in your database?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo2"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo2"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  If you choose to run our benchmarks, we will store the
+                  following information anonymously in a database on our server.
+                </p>
+                <ul style="list-style-type: square">
+                  <li>
+                    Your <strong>CPU model</strong>, that will be entered by you
+                    manually on the next page.
+                  </li>
+                  <li>
+                    Your <strong>browser version</strong> and your
+                    <strong>operating system</strong>.
+                  </li>
+                  <li>The <strong>benchmark results</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Can I explore these benchmarks?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                You can check out all our benchmarks
+                <a href="/overview">here</a>. There will be a few explanations
+                here and there, that are written for interested computer
+                scientists. Please note, that this part of the website is still
+                under heavy construction.
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          let button = document.getElementById("continuebutton");
+          let container = document.getElementById("continuecontainer");
+          if (!"SharedArrayBuffer" in window) {
+            button.disabled = true;
+            button.classList += " btn-danger";
+            //
+            let toggle = document.createAttribute("data-bs-toggle");
+            toggle.value = "tooltip";
+            container.setAttributeNode(toggle);
+            //
+            let enableHtml = document.createAttribute("data-bs-html");
+            enableHtml.value = "true";
+            container.setAttributeNode(enableHtml);
+            //
+            let title = document.createAttribute("title");
+            title.value =
+              "Your browser does not appear to support the necessary features for these benchmarks.";
+            container.setAttributeNode(title);
+            //
+            let position = document.createAttribute("data-bs-placement");
+            position.value = "bottom";
+            container.setAttributeNode(position);
+          } else {
+            button.classList += " btn-primary";
+          }
+          let tooltipTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="tooltip"]')
+          );
+          let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+  <footer class="text-center text-white fixed-bottom bg-dark">
+    <div class="text-center p-3">
+      <a class="text-white" href="https://github.com/Tr4mper"
+        >github.com/Tr4mper</a
+      >
+      - 2021
+    </div>
+  </footer>
+</html>

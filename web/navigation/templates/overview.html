@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+<!-- prettier-ignore -->
+{% block content %}
+<div
+  style="margin: 2rem; text-align: center"
+  class="alert alert-warning"
+  role="alert"
+>
+  Not all functionality has been implemented yet! This site is still under heavy
+  construction. 🔨
+</div>
+<p class="lead" style="padding: 2rem; text-align: center">
+  Here is a list of each individual benchmark we are running. You can inspect
+  and run each benchmark on its own. There will be a few explanations here and
+  there, that are written for interested computer scientists.
+</p>
+<div
+  class="container"
+  style="display: flex; justify-content: center; margin-bottom: 2rem"
+>
+  <div
+    class="alert alert-primary"
+    role="alert"
+    style="text-align: center; max-width: 60%"
+  >
+    Everything related to our data collection happens on the
+    <a href="/start" class="alert-link">Start</a> page. This section is only for
+    interested computer scientists.
+  </div>
+</div>
+<div class="container" style="display: flex; justify-content: center">
+  <ul class="list-group" style="width: 40%; text-align: center">
+    <li class="list-group-item">
+      <a href="/misc/cores">Number of CPU cores</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/performance/single">Single core performance</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/performance/multi">Multi core performance</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/performance/memory">Memory latencies</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/cache/size">Data cache sizes</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/cache/associativity">L1D cache associativity</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/tlb/size">L1D TLB size</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/misc/pagesize">Pagesize</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/misc/prefetcher">Prefetcher presence</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/buffer/load">Load buffer size</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/timer">Timer precision</a>
+    </li>
+  </ul>
+</div>
+{% endblock %}

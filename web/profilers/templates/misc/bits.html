@@ -1,0 +1,22 @@
+<!-- prettier-ignore -->
+
+{% extends "profiler.html" %}
+
+{% block headline %} 32-bit vs 64-bit {% endblock %} 
+
+{% block scripts %} {% load static %}
+<script src="{% static 'misc/bits/bits.js' %}"></script>
+{% endblock %}
+<!-- prettier-ignore -->
+{% block text %} Here we will determine the presence of 32-bit vs 64-bit. {% endblock %}
+<!-- prettier-ignore -->
+{% block buttons %}
+<button
+  id="startButton"
+  type="button"
+  class="btn btn-primary btn-lg"
+  onclick="calculateBits(CanvasJS)"
+>
+  Start profiler
+</button>
+{% endblock %}

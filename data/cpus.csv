@@ -1,0 +1,349 @@
+manufacturer;name;rname;cores;threads;base;boost;l1;l2;l3;l1asso;pagesize;loadbuffer;l1dtlb;microarchitecture
+Intel;Intel(R) Core(TM) i9-10900K;;10;20;3.70;5.30;32;256;20;8;4096;72;64;Comet Lake
+Intel;Intel(R) Core(TM) i7-8565U;;4;8;2.00;4.60;32;256;8;8;4096;;64;Whiskey Lake
+Intel;Intel(R) Core(TM) i7-10700;;8;16;2.90;4.80;32;256;16;8;4096;;64;Comet Lake
+Apple;Apple M1;;8;8;2.00;3.20;128;12288;;8;4096;;256;Firestorm and Icestorm
+Intel;Intel(R) Core(TM) i7-7500U;;2;4;2.70;3.50;32;256;4;8;4096;;64;Kaby Lake
+AMD;AMD Ryzen 5 5600X;;6;12;3.70;4.60;32;512;32;8;4096;;64;Zen 3
+Intel;Intel(R) Core(TM) i5-7300U;;2;4;2.60;3.50;32;256;3;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-8265U;;4;8;1.60;3.90;32;256;6;8;4096;;64;Whiskey Lake
+Intel;Intel(R) Core(TM) i5-11400F;;6;12;2.60;4.40;32;256;12;8;4096;;64;Rocket Lake
+AMD;AMD Ryzen 7 2700;;8;16;3.20;4.10;32;512;8;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i7-8550U;;4;8;1.80;4.00;32;256;8;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i7-7700HQ;;4;8;2.80;3.80;32;256;6;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i7-4850HQ;;4;8;2.30;3.50;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-7500;;4;4;3.40;3.80;32;256;6;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i7-3540M;;2;4;3.00;3.70;32;256;4;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-8700;;6;12;3.20;4.60;32;256;12;8;4096;;64;Coffee Lake
+AMD;AMD FX(TM)-8350;;8;8;4.00;4.20;16;2048;8;4;4096;;;Piledriver
+AMD;AMD Ryzen 7 3800X;;8;16;3.90;4.50;32;512;16;8;4096;;64;Zen 2
+Intel;Intel(R) Core(TM) i5-3230M;;2;4;2.60;3.20;32;256;3;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i9-9980HK;;8;16;2.40;5.00;32;256;16;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-3615QM;;4;8;2.30;3.30;32;256;6;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Celeron(R) CPU N3350;;2;2;1.10;2.40;24;2048;;6;4096;;64;Goldmont
+Intel;Intel(R) Core(TM) i7-9700;;8;8;3.00;4.70;32;256;12;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-10210U;;4;8;1.60;4.20;32;256;6;8;4096;;64;Comet Lake
+Intel;Intel(R) Xeon(R) CPU E3-1505M v5;;4;8;2.80;3.70;32;256;8;8;4096;;64;Skylake
+AMD;AMD Ryzen 5 3550H;;4;8;2.10;3.70;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i7-6700K;;4;8;4.00;4.20;32;256;8;8;4096;;64;Skylake
+AMD;AMD Ryzen 5 4500U;;6;6;2.30;4.00;32;512;8;8;4096;;64;Zen 2
+Intel;Intel(R) Core(TM) i5-4278U;;2;4;2.60;3.10;32;256;3;8;4096;;64;Haswell
+AWS;AWS Graviton A1;ARM Cortex-A72;16;16;2.30;2.30;32;2048;;2;4096;;32;Cortex-A72
+AMD;AMD Ryzen 7 3700X;;8;16;3.60;4.40;32;512;16;8;4096;;64;Zen 2
+AMD;AMD Ryzen 3 4300U;;4;4;2.70;3.70;32;512;4;8;4096;;64;Zen 2
+AMD;AMD Ryzen 7 4800HS;;8;16;2.90;4.20;32;512;4;8;4096;;64;Zen 2
+Intel;Intel(R) Core(TM) i5-4570;;4;4;3.20;3.60;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-8650U;;4;8;1.90;4.20;32;256;8;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-8259U;;4;8;2.30;3.80;32;256;6;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-10875H;;8;16;2.30;5.10;32;256;16;8;4096;;64;Comet Lake
+AMD;AMD Ryzen 5 1600X;;6;12;3.60;4.00;32;512;8;8;4096;;64;Zen
+Intel;Intel(R) Core(TM) i9-8950HK;;6;12;2.90;4.80;32;256;12;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-6700;;4;8;3.40;4.00;32;256;8;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i5-7287U;;2;4;3.30;3.70;32;256;4;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-8600K;;6;6;3.60;4.30;32;256;9;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-3470;;4;4;3.20;3.60;32;256;6;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i5-8365U;;4;8;1.60;4.10;32;256;6;8;4096;;64;Whiskey Lake
+AMD;AMD Ryzen 7 2700X;;8;16;3.70;4.30;32;512;8;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i5-4670K;;4;4;3.40;3.80;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-6500U;;2;4;2.50;3.10;32;256;4;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i7-10510U;;4;8;1.80;4.90;32;256;8;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i7-7567U;;2;4;3.50;4.00;32;256;4;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-8350U;;4;8;1.70;3.60;32;256;6;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-4200U;;2;4;1.60;2.60;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-4690K;;4;4;3.50;3.90;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-1068NG7;;4;8;2.30;4.10;48;512;8;12;4096;;64;Ice Lake
+AMD;AMD Ryzen 9 5900X;;12;24;3.70;4.80;32;512;32;8;4096;;64;Zen 3
+Intel;Intel(R) Core(TM) i7-10750H;;6;12;2.60;5.00;32;256;12;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i5-3570;;4;4;3.40;3.80;32;256;6;8;4096;;64;Ivy Bridge
+AMD;AMD Ryzen 5 1600;;6;12;3.20;3.60;32;512;8;8;4096;;64;Zen
+Intel;Intel(R) Core(TM) i7-8559U;;4;8;2.70;4.50;32;256;8;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-3720QM;;4;8;2.60;3.60;32;256;6;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-8569U;;4;8;2.80;4.70;32;256;8;8;4096;;64;Coffee Lake
+AMD;AMD Ryzen 5 3600;;6;12;3.60;4.20;32;512;16;8;4096;;64;Zen 2
+AMD;AMD Ryzen 5 2600;;6;12;3.40;3.90;32;512;8;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i5-6300U;;2;4;2.40;3.00;32;256;3;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i7-9750H;;6;12;2.60;4.50;32;256;12;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-8850H;;6;12;2.60;4.30;32;256;9;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-4600U;;2;4;2.10;3.30;32;256;4;8;4096;;64;Haswell
+Intel;Intel(R) Code(TM) i7-4850HQ;;4;8;2.30;3.50;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-4870HQ;;4;8;2.50;3.70;32;256;6;8;4096;;64;Haswell
+HiSilicon;HiSilicon Kirin 970;Cortex-A73/-A53;8;8;2.36;2.80;64;2048;;4;4096;;;Cortex-A73/-A53
+AMD;AMD Ryzen 7 5800X;;8;16;3.80;4.70;32;512;32;8;4096;;64;Zen 3
+AMD;AMD A4-4300M APU;;2;2;2.50;3.00;16;1024;;4;4096;;64;Piledriver
+Intel;Intel(R) Core(TM) i7-2620M;;2;4;2.70;3.40;32;256;4;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i7-4790K;;4;8;4.00;4.40;32;256;8;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-8250U;;4;8;1.60;3.40;32;256;6;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-4300M;;2;4;2.60;3.30;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i3-6006U;;2;4;2.00;2.00;32;256;3;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i5-7360U;;2;4;2.30;3.60;32;256;4;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-8600;;6;6;3.10;4.30;32;256;9;8;4096;;64;Coffee Lake
+AMD;AMD Ryzen 7 4700U;;8;8;2.00;4.10;32;512;4;8;4096;;64;Zen 2
+Intel;Intel(R) Core(TM) i5-6500;;4;4;3.20;3.60;32;256;6;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i7-8750H;;6;12;2.20;4.10;32;256;9;8;4096;;64;Coffee Lake
+HiSilicon;HiSilicon Kirin 960;Cortex-A73/-A53;8;8;2.36;2.80;64;2048;;4;4096;;;Cortex-A73/-A53
+Intel;Intel(R) Core(TM) i5-8210Y;;2;4;1.60;3.60;32;256;4;8;4096;;64;Amber Lake
+Intel;Intel(R) Core(TM) i7-3520M;;2;4;2.90;3.60;32;256;4;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-6700HQ;;4;8;2.60;3.50;32;256;6;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i7-3770S;;4;8;3.10;3.90;32;256;8;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-5500U;;2;4;2.40;3.00;32;256;4;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i7-1065G7;;4;8;1.30;3.90;32;512;8;12;4096;;64;Ice Lake
+Intel;Intel(R) Core(TM) i5-2520M;;2;4;2.50;3.20;32;256;3;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i7-6800K;;6;12;3.40;3.60;32;256;15;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i5-9600K;;6;6;3.70;4.60;32;256;9;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-5600U;;2;4;2.60;3.20;32;256;4;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i7-7660U;;2;4;2.50;4.00;32;256;4;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i7-3770;;4;8;3.40;3.90;32;256;8;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i5-3570K;;4;4;3.40;3.80;32;256;6;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-4770K;;4;8;3.50;3.90;32;256;8;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-9700K;;8;8;3.60;4.90;32;256;12;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-4288U;;2;4;2.60;3.10;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-4300U;;2;4;1.90;2.90;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-1185G7;;4;8;3.00;4.80;48;1280;12;12;4096;;64;Tiger Lake
+Intel;Intel(R) Core (TM) i5-10300H;;4;8;2.50;4.50;32;256;8;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i7-5650U;;2;4;2.20;3.20;32;256;4;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i9-9900K;;8;16;3.60;5.00;32;256;16;8;4096;;64;Coffee Lake
+AMD;AMD Ryzen 5 3500U;;4;8;2.10;3.70;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i7-1165G7;;4;8;2.80;4.70;48;1280;12;12;4096;;64;Tiger Lake
+AMD;AMD Ryzen 5 3400G;;4;8;3.70;4.20;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i5-7200U;;2;4;2.50;3.10;32;256;3;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-3470T;;2;4;2.90;3.60;32;256;3;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-9750HF;;6;12;2.60;4.50;32;256;12;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-1135G7;;4;8;2.40;4.20;48;1280;8;12;4096;;64;Tiger Lake
+Intel;Intel(R) Core(TM) i5-8400;;6;6;2.80;4.00;32;256;9;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-10700K;;8;16;3.80;5.10;32;256;16;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i3-5015U;;2;4;2.10;2.10;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i7-10870H;;8;16;2.20;5.00;32;256;16;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i5-5200U;;2;4;2.20;2.70;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i3-7100;;2;4;3.90;3.90;32;256;3;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i7-8700K;;6;12;3.70;4.70;32;256;12;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-2720QM;;4;8;2.20;3.30;32;256;6;8;4096;;64;Sandy Bridge
+AMD;AMD Ryzen 5 3400G;;4;8;3.70;4.20;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i5-6300HQ;;4;4;2.30;3.20;32;256;6;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i5-3750K;;4;4;3.40;3.80;32;256;6;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-4770;;4;8;3.40;3.90;32;256;8;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-2600K;;4;8;3.40;3.80;32;256;8;8;4096;;64;Sandy Bridge
+AMD;AMD Ryzen 3 1200;;4;4;3.10;3.40;32;512;8;8;4096;;64;Zen
+Intel;Intel(R) Core(TM) i5-10300H;;4;8;2.50;4.50;32;256;8;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i3-8130U;;2;4;2.20;3.40;32;256;4;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i3-1005G1;;2;4;1.20;3.40;48;512;4;12;4096;;64;Ice Lake
+Intel;Intel(R) Core(TM) i5-9400;;6;6;2.90;4.10;32;256;9;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-4800MQ;;4;8;2.70;3.70;32;256;6;8;4096;;64;Haswell
+AMD;AMD Ryzen 9 3900X;;12;24;3.80;4.60;32;512;16;8;4096;;64;Zen 2
+AMD;AMD Ryzen 3 3250U;;2;4;2.60;3.50;32;512;4;8;4096;;64;Zen
+Intel;Intel(R) Pentium(R) CPU 6405U;;2;4;2.40;2.40;32;256;2;8;4096;;64;Comet Lake
+Intel;Intel(R) Xeon(R) CPU E3-1231 v3;;4;8;3.40;3.80;32;256;8;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM)2 Duo CPU E7400;;2;2;2.80;2.80;32;3072;;8;4096;;64;Wolfdale
+Intel;Intel(R) Core(TM)2 Duo CPU P8600;;2;2;2.40;2.40;32;3072;;8;4096;;64;Penryn
+Intel;Intel(R) Core(TM)2 Duo CPU P7350;;2;2;2.00;2.00;32;3072;;8;4096;;64;Penryn
+AMD;AMD Ryzen 7 PRO 3700U;;4;8;2.30;4.00;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i7-2700K;;4;8;3.50;3.90;32;256;8;8;4096;;64;Sandy Bridge
+AMD;AMD A8-3870 APU;;4;4;3.00;3.00;64;1024;;2;4096;;64;K10
+AMD;AMD A9-9425;;2;2;3.10;3.70;32;1024;;8;4096;;64;Excavator
+AMD;AMD Athlon 64 X2 5000B;;2;2;2.60;2.60;64;512;;2;4096;;64;K8
+AMD;AMD A6-4400M APU;;2;2;2.70;3.20;16;1024;;4;4096;;64;Piledriver
+AMD;AMD A6-7310 APU;;4;4;2.00;2.40;32;2048;;8;4096;;64;Puma+
+Intel;Intel(R) Core(TM) i5-8300H;;4;8;2.30;4.00;32;256;8;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(tm) i5-5200U;;2;4;2.20;2.70;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i3-6100;;2;4;3.70;3.70;32;256;3;8;4096;;64;Skylake
+AMD;AMD Ryzen 7 4800H;;8;16;2.90;4.20;32;512;4;8;4096;;64;Zen 2
+Intel;Intel(R) Core(TM) i5-5287U;;2;4;2.90;3.30;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i7-3520M;;2;4;2.90;3.60;32;256;4;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i5-6200U;;2;4;2.30;2.80;32;256;3;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i5-4690K;;4;4;3.50;3.90;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-2600;;4;8;3.40;3.80;32;256;8;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i7-3770K;;4;8;3.50;3.90;32;256;8;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Pentium(R) CPU 4415Y;;2;4;1.60;1.60;32;256;2;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-4590;;4;4;3.30;3.70;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-4650U;;2;4;1.70;3.30;32;256;4;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i3-9100;;4;4;3.60;4.20;32;256;6;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i3-7100U;;2;4;2.40;2.40;32;256;3;8;4096;;64;Kaby Lake
+Intel;Intel(R) Celeron(R) CPU N2815;;2;2;1.86;2.13;24;1024;;6;4096;;64;Silvermont
+AMD;AMD FX(TM)-4300;;4;4;3.80;4.00;16;2048;4;4;4096;;64;Piledriver
+Intel;Intel(R) Pentium(R) CPU B940;;2;2;2.00;2.00;32;256;2;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i3-10100;;4;8;3.60;4.30;32;256;6;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i5-7600K;;4;4;3.80;4.20;32;256;6;8;4096;;64;Kaby Lake
+AMD;AMD Ryzen 5 3600X;;6;12;3.80;4.40;32;512;16;8;4096;;64;Zen 2
+AMD;AMD Ryzen 3 3200U;;2;4;2.60;3.50;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i5-3210M;;2;4;2.50;3.10;32;256;3;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i5-5257U;;2;4;2.70;3.10;32;256;3;8;4096;;64;Broadwell
+AMD;AMD Ryzen 9 5900HX;;8;16;3.30;4.60;32;512;16;8;4096;;64;Zen 3
+Intel;Intel(R) Core(TM) i5-1035G1;;4;8;1.00;3.60;48;512;6;12;4096;;64;Ice Lake
+Intel;Intel(R) Core(TM) i5-4250U;;2;4;1.30;2.60;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) 2 Duo CPU T5870;;2;2;2.00;2.00;32;2048;;8;4096;;64;Merom
+Intel;Intel(R) Core(TM) i3-3220;;2;4;3.30;3.30;32;256;3;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i5-9300H;;4;8;2.40;4.10;32;256;8;8;4096;;64;Coffee Lake
+AMD;AMD A10-9600P;;4;4;2.40;3.30;32;1024;;8;4096;;64;Excavator
+Intel;Intel(R) Core(TM) i7-9850H;;6;12;2.60;4.60;32;256;12;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-7400;;4;4;3.00;3.50;32;256;6;8;4096;;64;Kaby Lake
+AMD;AMD Ryzen 7 5800H;;8;16;3.20;4.40;32;512;16;8;4096;;64;Zen 3
+Intel;Intel(R) Core(TM) i5-6600K;;4;4;3.50;3.90;32;256;6;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i5-6267U;;2;4;2.90;3.30;32;256;4;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM)2 Duo CPU E7500;;2;2;2.93;2.93;32;6042;;8;4096;;64;Wolfdale
+Intel;Intel(R) Core(TM) i5-4308U;;2;4;2.80;3.30;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Pentium(R) CPU G3220;;2;2;3.00;3.00;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i3-8145U;;2;4;2.10;3.90;32;256;4;8;4096;;64;Whiskey Lake
+AMD;AMD Ryzen 5 2600X;;6;12;3.60;4.20;32;512;8;8;4096;;64;Zen+
+Intel;Intel(R) Xeon(R) CPU E5-2676 v3;;12;24;2.40;2.40;32;256;30;8;4096;;64;Haswell
+AMD;AMD Athlon(TM) X4 860K;;4;4;3.70;4.00;16;2048;;4;4096;;64;Steamroller
+Intel;AMD FX(TM)-8320E;;8;8;3.20;4.00;16;2048;8;4;4096;;64;Piledriver
+Intel;Intel(R) Celeron(R) N4000;;2;2;1.10;2.60;24;4096;;6;4096;;64;Goldmont Plus
+Intel;AMD Turion(TM) X2 Ultra Dual-Core ZM-87;;2;2;2.40;2.40;64;1024;;2;4096;;64;K8
+Intel;Intel(R) Core(TM) i3-5020U;;2;4;2.20;2.20;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i5-9400F;;6;6;2.90;4.10;32;256;9;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-5250U;;2;4;1.60;2.70;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i7-5960X;;8;16;3.00;3.50;32;256;20;8;4096;;64;Haswell
+AMD;AMD Ryzen 3 2200U;;2;4;2.50;3.40;32;512;4;8;4096;;64;Zen
+AMD;AMD Ryzen 5 4600H;;6;12;3.00;4.00;32;512;4;8;4096;;64;Zen 2
+Intel;Intel(R) Core(TM) i9-9880H;;8;16;2.30;4.80;32;256;16;8;4096;;64;Coffee Lake
+Intel;Intel(R) Pentium(R) Silver N5030 CPU;;4;4;1.10;3.10;24;4096;;6;4096;;64;Goldmont Plus
+Intel;Intel(R) Core(TM) i5-10400F;;6;12;2.90;4.30;32;256;12;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i3-4000M;;2;4;2.40;2.40;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-2670QM;;4;8;2.20;3.10;32;256;6;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i7-10700KF;;8;16;3.80;5.10;32;256;16;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i7-8665U;;4;8;1.90;4.80;32;256;8;8;4096;;64;Whiskey Lake
+Intel;Intel(R) Core(TM) i7-4510U;;2;4;2.00;3.10;32;256;4;8;4096;;64;Haswell
+Intel;Intel(R) Pentium(R) CPU 5405U;;2;4;2.30;2.30;32;256;2;8;4096;;64;Whiskey Lake
+Intel;Intel(R) Core(TM) i5-8500T;;6;6;2.10;3.50;32;256;9;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-7300HQ;;4;8;2.50;3.50;32;256;6;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i5-4670;;4;4;3.40;3.80;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Pentium(R) CPU G3240;;2;2;3.10;3.10;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-2415M;;2;4;2.30;2.90;32;256;3;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Pentium(R) CPU G3260T;;2;2;2.90;2.90;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i3-5010U;;2;4;2.10;2.10;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i3-8100;;4;4;3.60;3.60;32;256;6;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i3-6100U;;2;4;2.30;2.30;32;256;3;8;4096;;64;Skylake
+AMD;AMD FX(TM)-9370;;8;8;4.40;4.70;16;2048;8;4;4096;;64;Piledriver
+AMD;AMD Ryzen 7 1700X;;8;16;3.40;3.80;32;512;8;8;4096;;64;Zen
+AMD;AMD FX(TM)-8150;;8;8;3.60;4.20;16;2048;8;4;4096;;64;Bulldozer
+AMD;AMD FX(TM)-8300;;8;8;3.30;4.20;16;2048;8;4;4096;;64;Piledriver
+Intel;Intel(R) Core(TM) i5-4460S;;4;4;2.90;3.40;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Xeon(R) CPU E3-1245 v3;;4;8;3.40;3.80;32;256;8;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-4610M;;2;4;3.00;3.70;32;256;4;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-10500;;6;12;3.10;4.50;32;256;12;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i7-7700K;;4;8;4.20;4.50;32;256;8;8;4096;;64;Kaby Lake
+Intel;Intel(R) Core(TM) i7-10710U;;6;12;1.10;4.70;32;256;12;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i5-4310U;;2;4;2.00;3.00;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i3-1115G4;;2;4;2.20;3.90;48;1280;6;12;4096;;64;Tiger Lake
+Intel;Intel(R) Core(TM) i5-5350U;;2;4;1.80;2.90;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Celeron(R) CPU G3930;;2;2;2.90;2.90;32;256;2;8;4096;;64;Kaby Lake
+AMD;AMD FX(TM)-8120;;8;8;3.10;4.00;16;2048;8;4;4096;;64;Bulldozer
+AMD;AMD A10-6800K APU;;4;4;4.10;4.40;16;2048;;4;4096;;64;Piledriver
+Intel;Intel(R) Core(TM) i5-3340M;;2;4;2.70;3.40;32;256;3;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i5-4260U;;2;4;1.40;2.70;32;256;3;8;4096;;64;Haswell
+AMD;AMD Ryzen 7 5700G;;8;16;3.80;4.60;32;512;16;8;4096;;64;Zen 3
+Intel;Intel(R) Core(TM) i5-1035G4;;4;8;1.10;3.70;48;512;6;12;4096;;64;Ice Lake
+Intel;Intel(R) Core(TM) i5-2400;;4;4;3.10;3.40;32;256;6;8;4096;;64;Sandy Bridge
+AMD;AMD FX(TM)-6300;;6;6;3.50;4.10;16;2048;;4;4096;;64;Piledriver
+Intel;Intel(R) Core(TM) i7-5820K;;6;12;3.30;3.60;32;256;15;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-4210U;;2;4;1.70;2.70;32;256;3;8;4096;;64;Haswell
+AMD;AMD A9-9420;;2;2;3.00;3.60;32;1024;;8;4096;;64;Excavator
+AMD;AMD A9-9425;;2;2;3.10;3.70;32;1024;;8;4096;;64;Excavator
+AMD;AMD A12-9720P;;4;4;2.70;3.60;32;1024;;8;4096;;64;Excavator
+AMD;AMD Phenom II X4 925;;4;4;2.80;2.80;64;512;6;2;4096;;64;K10
+AMD;AMD FX-7500;;4;4;2.10;3.30;16;2048;;4;4096;;64;Steamroller
+AMD;AMD A8-7410 APU;;4;4;2.20;2.50;32;2048;;8;4096;;64;Puma+
+AMD;AMD A6-5200 APU;;4;4;2.00;2.00;32;2048;;8;4096;;64;Jaguar
+Intel;Intel(R) Pentium(R) Dual-Core CPU E5200;;2;2;2.50;2.50;32;2048;;8;4096;;64;Wolfdale
+Intel;Intel(R) Pentium(R) Dual CPU E2180;;2;2;2.00;2.00;32;1024;;8;4096;;64;Allendale
+Intel;Intel(R) Pentium(R) Dual-Core CPU T4500;;2;2;2.30;2.30;32;2048;;8;4096;;64;Penryn
+AMD;AMD Ryzen 7 3700U;;4;8;2.30;4.00;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i5-5300U;;2;4;2.30;2.90;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM)2 Duo CPU P7550;;2;2;2.26;2.26;32;3072;;8;4096;;64;Penryn
+Intel;Intel(R) Core(TM) i3-4030U;;2;4;1.90;1.90;32;256;3;8;4096;;64;Haswell
+AMD;AMD Ryzen 5 2400G;;4;8;3.60;3.90;32;512;4;8;4096;;64;Zen
+Intel;Intel(R) Pentium(R) CPU G4400;;2;2;3.30;3.30;32;256;3;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i5-3337U;;2;4;1.80;2.70;32;256;3;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-4600M;;2;4;2.90;3.60;32;256;4;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-10600K;;6;12;4.10;4.80;32;256;12;8;4096;;64;Comet Lake
+Intel;Intel(R) Core(TM) i5-3300;;4;4;3.00;3.20;32;256;6;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i5-4310M;;2;4;2.70;3.40;32;256;3;8;4096;;64;Haswell
+AMD;AMD Ryzen 5 3450U;;4;8;2.10;3.50;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Atom(TM) x7-Z8700;;4;4;1.60;2.40;24;1024;;6;4096;;64;Airmont
+Intel;Intel(R) Core(TM) i7-4810MQ;;4;8;2.80;3.80;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-3667U;;2;4;2.00;3.20;32;256;4;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-4770HQ;;4;8;2.20;3.40;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i3-4005U;;2;4;1.70;1.70;32;256;3;8;4096;;64;Haswell
+AMD;AMD A8-4500M APU;;4;4;1.90;2.80;16;2048;;4;4096;;64;Piledriver
+AMD;AMD Ryzen 9 4900HS;;8;16;4.30;4.30;32;512;4;8;4096;;64;Zen 2
+Intel;Intel(R) Core(TM) i5-4210M;;2;4;2.60;3.20;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-4590T;;4;4;2.00;3.00;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Pentium(R) CPU N3700;;4;4;1.60;2.40;24;1024;;6;4096;;64;Airmont
+Intel;Intel(R) Core(TM) i7-6920HQ;;4;8;2.90;3.80;32;256;8;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i7-9750H;;6;12;2.60;4.50;32;256;12;8;4096;;64;Coffee Lake
+AMD;AMD Ryzen 7 3700U;;4;8;2.30;4.00;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i5-1035G7;;4;8;1.20;3.70;48;512;6;12;4096;;64;Ice Lake
+AMD;AMD A10-9620P;;4;4;2.50;3.40;32;1024;;8;4096;;64;Excavator
+Intel;Intel(R) Core(TM) i7-3630QM;;4;8;2.40;3.40;32;256;6;8;4096;;64;Ivy Bridge
+Intel;AMD A8-5500 APU;;4;4;3.20;3.70;16;2048;;4;4096;;64;Piledriver
+Intel;Intel(R) Core(TM) i5-6600;;4;4;3.30;3.90;32;256;6;8;4096;;64;Skylake
+Intel;Intel(R) Celeron(R) CPU N2830;;2;2;2.16;2.42;24;1024;;6;4096;;64;Silvermont
+Intel;Intel(R) Core(TM) i7-4710HQ;;4;8;2.50;3.50;32;256;6;8;4096;;64;Haswell
+AMD;AMD Ryzen 5 2500U;;4;8;2.00;3.60;32;512;4;8;4096;;64;Zen
+Intel;Intel(R) Core(TM) i3-10110U;;2;4;2.10;4.10;32;256;4;8;4096;;64;Comet Lake
+Intel;Intel(R) Pentium(R) Silver N5000 CPU;;4;4;1.10;2.70;24;4096;;6;4096;;64;Gemini Lake
+Intel;Intel(R) Core(TM) i3-4150;;2;4;3.50;3.50;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-7920HQ;;4;8;3.10;4.10;32;256;8;8;4096;;64;Kaby Lake
+Intel;Intel(R) Pentium(R) CPU N3540;;4;4;2.16;2.66;24;1024;;6;4096;;64;Silvermont
+Intel;Intel(R) Pentium(R) CPU N3710;;4;4;1.60;2.56;24;1024;;6;4096;;64;Airmont
+Intel;Intel(R) Celeron (R) N3050 CPU;;2;2;1.60;2.16;24;1024;;6;4096;;64;Airmont
+Intel;Intel(R) Core(TM) i7-4770HQ;;4;8;2.20;3.40;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-4700MQ;;4;8;2.40;3.40;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i5-6360U;;2;4;2.00;3.10;32;256;4;8;4096;;64;Skylake
+Intel;AMD FX(TM)-8320;;8;8;3.50;4.00;16;2048;8;4;4096;;64;Piledriver
+Intel;Intel(R) Core(TM) i3-4130;;2;4;3.40;3.40;32;256;3;8;4096;;64;Haswell
+AMD;AMD Ryzen 3 3200G;;4;4;3.60;4.00;32;512;4;8;4096;;64;Zen+
+Intel;Intel(R) Core(TM) i5-3330;;4;4;3.00;3.20;32;256;6;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i5-2500K;;4;4;3.30;3.70;32;256;6;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i7-9700KF;;8;8;3.60;4.90;32;256;12;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i9-9900KF;;8;16;3.60;5.00;32;256;16;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-4430;;4;4;3.00;3.20;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i3-1000NG4;;2;4;1.10;3.20;48;512;4;12;4096;;64;Ice Lake
+Intel;Intel(R) Core(TM) i7-2630QM;;4;8;2.00;2.90;32;256;6;8;4096;;64;Sandy Bridge
+AMD;AMD Ryzen 7 1700;;8;16;3.00;3.70;32;512;8;8;4096;;64;Zen
+Intel;Intel(R) Pentium(R) CPU J4205;;4;4;1.50;2.60;24;1024;;6;4096;;64;Goldmont
+Intel;Intel(R) Core(TM)2 Duo CPU E8400;;2;2;3.00;3.00;32;6144;;8;4096;;64;Wolfdale
+Intel;Intel(R) Pentium (R) CPU G620T;;2;2;2.20;2.20;32;256;3;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) M-5Y71;;2;4;1.20;2.90;32;256;4;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i5-3320M;;2;4;2.60;3.30;32;256;3;8;4096;;64;Ivy Bridge
+AMD;AMD A10-8700P;;4;4;1.80;3.20;32;1024;;8;4096;;64;Excavator
+AMD;AMD Turion(TM) II P520;;2;2;2.30;2.30;64;1024;;2;4096;;64;K10
+AMD;AMD Athlon(TM) Silver 3050U;;2;2;2.30;3.20;32;512;4;8;4096;;64;Zen
+Intel;Intel(R) Core(TM) i3-4012Y;;2;4;1.50;1.50;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Celeron(R) N4020 CPU;;2;2;1.10;2.80;24;4096;;6;4096;;64;Goldmont Plus
+Intel;Intel(R) Core(TM) i5-2320;;4;4;3.00;3.30;32;256;6;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i7-9700F;;8;8;3.00;4.70;32;256;12;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-2410M;;2;4;2.30;2.90;32;256;3;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i3-9100T;;4;4;3.10;3.70;32;256;6;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i7-3632QM;;4;8;2.20;3.20;32;256;6;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i3-2350M;;2;4;2.30;2.30;32;256;3;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i5-3350P;;4;4;3.10;3.30;32;256;6;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i3-5005U;;2;4;2.00;2.00;32;256;3;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM) i3-3240;;2;4;1.60;3.40;32;256;3;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i9-10900;;10;20;2.80;5.10;32;256;20;8;4096;;64;Comet Lake
+Intel;Intel(R) Celeron(R) CPU B820;;2;2;1.70;1.70;32;256;2;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Pentium(R) CPU G860;;2;2;3.00;3.00;32;256;3;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i7-7600U;;2;4;2.80;3.90;32;256;4;8;4096;;64;Kaby Lake
+AMD;AMD Ryzen 5 3500;;6;6;3.60;4.10;32;512;16;8;4096;;64;Zen 2
+Intel;Intel(R) Core(TM) i7-4790;;4;8;3.60;4.00;32;256;8;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-7700;;4;8;3.60;4.20;32;256;8;8;4096;;64;Kaby Lake
+AMD;AMD Ryzen 3 2200G;;4;4;3.50;3.70;32;512;4;8;4096;;64;Zen
+Intel;Intel(R) Core(TM) i7-4720HQ;;4;8;2.60;3.60;32;256;6;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i9-7900X;;10;20;3.30;4.50;32;1024;13;8;4096;;64;Skylake
+Intel;Intel(R) Core(TM) i5-5575R;;4;4;2.80;3.30;32;256;4;8;4096;;64;Broadwell
+Intel;Intel(R) Core(TM)2 Duo CPU T9400;;2;2;2.53;2.53;32;6144;;8;4096;;64;Penryn
+Intel;Intel(R) Celeron(R) CPU B840;;2;2;1.90;1.90;32;256;2;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Atom(TM) x5-E8000;;4;4;1.04;2.00;24;1024;;6;4096;;64;Airmont
+Intel;Intel(R) Core(TM) i5-8257U;;4;8;1.40;3.90;32;256;6;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-4258U;;2;4;2.40;2.90;32;256;3;8;4096;;64;Haswell
+Intel;Intel(R) Core(TM) i7-3687U;;2;4;2.10;3.30;32;256;4;8;4096;;64;Ivy Bridge
+Intel;Intel(R) Core(TM) i7-2640M;;2;4;2.80;3.50;32;256;4;8;4096;;64;Sandy Bridge
+Intel;AMD A4-3300M APU;;2;2;1.90;2.50;64;1024;;2;4096;;64;K10
+Intel;AMD Ryzen 5 5500U;;6;12;2.10;4.00;32;512;4;8;4096;;64;Zen 2
+Intel;Intel(R) Core(TM) i5-2435M;;2;4;2.40;3.00;32;256;3;8;4096;;64;Sandy Bridge
+Intel;Intel(R) Core(TM) i9-9900;;8;16;3.10;5.00;32;256;16;8;4096;;64;Coffee Lake
+Intel;Intel(R) Core(TM) i5-4460;;4;4;3.20;3.40;32;256;6;8;4096;;64;Haswell
+Intel;AMD FX(TM)-6100;;6;6;3.30;3.90;16;2048;8;4;4096;;64;Bulldozer
+Intel;Intel(R) Core(TM) i7-8700T;;6;12;2.40;4.00;32;256;12;8;4096;;64;Coffee Lake
+Intel;AMD E1-1200 APU;;2;2;1.40;1.40;32;512;;8;4096;;64;Bobcat
+Intel;Intel(R) Core(TM) i5-4690T;;4;4;2.50;3.50;32;256;6;8;4096;;64;Haswell
+Intel;AMD Ryzen 7 1800X;;8;16;3.60;4.00;32;512;8;8;4096;;64;Zen
