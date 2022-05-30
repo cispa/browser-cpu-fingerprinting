@@ -82,7 +82,7 @@ execution_times = []
 def load_test_data():
     global db_models_test, execution_times, cacheasso_benchmarks, cachesize_benchmarks_small, cachesize_benchmarks_large
     global tlb_benchmarks, timer_diff, singleperf_benchmarks, cores
-    con = sqlite3.connect('/home/leon/backups/db_noisy.sqlite3')
+    con = sqlite3.connect('/path/to/db_noisy.sqlite3')
     cursor = con.execute("SELECT * FROM upload_benchmarkresult;")
     for row in cursor.fetchall():
         db_models_test += [row[1]]

@@ -158,7 +158,7 @@ def load_database():
     print('[-]  Loading from sqlite3 database')
     eliminated = 0
     start_time = time.time()
-    con = sqlite3.connect('/home/leon/backups/db.sqlite3')
+    con = sqlite3.connect('/path/to/db.sqlite3')
 
     db_models = []
     # pagesize_benchmarks = []
@@ -201,7 +201,7 @@ def load_database():
         cores += [benchmarks[12]]
 
     print('[-]  Loading from PostgreSQL database')
-    dump = pgdumplib.load('/home/leon/backups/backup7.dump')
+    dump = pgdumplib.load('/path/to/db.dump')
     for row in dump.table_data('public', 'upload_benchmarkresult'):
         db_models += [row[1]]
         execution_times += [json.loads(row[5])]

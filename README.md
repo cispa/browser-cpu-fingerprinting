@@ -67,6 +67,24 @@ classification/dataset_visualization.ipynb    - showcases the data sets used for
 classification/utils/                         - contains utilities to load the data set from the database dumps
 ```
 
+### Dataset
+
+Our dataset is available on [here](https://drive.google.com/drive/folders/1ZL6n-G5poQIYfab6CPDOs6zkK7I-wqEt?usp=sharing) on Google Drive.
+It consists of three files.
+
+```
+db.sqlite3           - contains the initial dataset. This file is an SQLite3 database.
+db.dump              - contains the dataset collected using crowdsourcing. This file is a dump of a PostgreSQL database.
+
+db_noisy.sqlite3     - contains the small noisy data set. This file is an SQLite3 database.
+```
+Update the file paths in `classificatio/utils/cache.py` and `classification/noisy.py` to use the dataset with our code.
+You can either restore the PostgreSQL using `pg_restore`, or use a library like [pgdumplib](https://pypi.org/project/pgdumplib/) to read the dump directly.
+
 ## Native
 
 `native/` contains a variety of benchmark templates implemented in C and with some x86_64 inline assembly.
+
+## TODOS
+
+- [ ] add `requirements.txt`
