@@ -8,15 +8,26 @@ The Django application is built using Bootstrap and CanvasJS. It serves the diff
 
 ### Quickstart
 
-Create a `.env` file containing:
+First create a `.env` file in the repository folder containing:
 
 ```
 SECRET_KEY=<something>
 REDEEM_SECRET=<something>
 ```
 
+Then create a new Python virtual environment and install the dependencies:
+```bash
+cd web
+python3 -m venv webenv
+source webenv/bin/activate
+pip3 install -r requirements.txt
+```
+
 Then run:
-`cd web && python3 manage.py runserver --nostatic`
+`python3 manage.py migrate && python3 manage.py makemigrations && python3 manage.py runserver --nostatic`
+
+There should now be a website running on http://localhost:8000.
+If you want to use the [admin dashboard](http://localhost:8000/admin) you must first create an admin account: `python3 manage.py createsuperuser`.
 
 ### Structure
 
@@ -87,4 +98,4 @@ You can either restore the PostgreSQL using `pg_restore`, or use a library like 
 
 ## TODOS
 
-- [ ] add `requirements.txt`
+- [ ] add `requirements.txt` to classification
