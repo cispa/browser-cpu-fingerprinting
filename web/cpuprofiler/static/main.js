@@ -2,32 +2,14 @@ let profiler_times = [];
 let profiler_results = [];
 let profiler_names = [];
 let profiler_chart_types = [];
-const PROFILERS = 13;
+const PROFILERS = 5;
 let tmp;
 let LARGE = true;
+let stop = false;
 
 async function startProfilers() {
-  if (document.getElementById("model").value == "") {
-    document.getElementById("model").classList.add("is-invalid");
-    return;
-  }
-
-  if (document.getElementById("workerid").value == "") {
-    document.getElementById("workerid").classList.add("is-invalid");
-    return;
-  }
-
   window.scrollBy(0, 10000);
 
-  interval_id = setInterval(dec_timer, 1000);
-
-  document.getElementById("model").classList.remove("is-invalid");
-  document.getElementById("model").setAttribute("readonly", true);
-
-  document.getElementById("workerid").classList.remove("is-invalid");
-  document.getElementById("workerid").setAttribute("readonly", true);
-
-  document.getElementById("lowMemory").disabled = true;
   document.getElementById("startButton").disabled = true;
 
   // Shared memory
@@ -40,9 +22,9 @@ async function startProfilers() {
   const clock = await startClockWorker();
 
   tmp = performance.now();
-  profiler_names.push("Pagesize");
-  updateProfiler("Pagesize");
-  pagesize(memory, clock);
+  profiler_names.push("Cacheassociativity");
+  updateProfiler("Cacheassociativity");
+  cacheassociativity(memory, clock);
 }
 
 async function checkChargingStatus() {

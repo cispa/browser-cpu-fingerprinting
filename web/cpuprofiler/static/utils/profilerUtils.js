@@ -118,7 +118,7 @@ async function createChartsAndUpload() {
     (x) => Math.round((x / 1000 + Number.EPSILON) * 100) / 100
   );
 
-  if (VERBOSE && !document.getElementById("lowMemory").checked) {
+  if (VERBOSE) {
     for (let i = 0; i < profiler_results.length; i++) {
       createAccordionItem(
         "resultAccordion",
@@ -130,14 +130,9 @@ async function createChartsAndUpload() {
     }
   }
 
-  let model = document.getElementById("model").value;
-  model = model.substring(0, 255);
-
   let data = {
     benchmark_results: profiler_results,
-    model: model,
     user_agent: navigator.userAgent.substring(0, 255),
-    workerid: document.getElementById("workerid").value.trim(),
     times: profiler_times,
   };
 
@@ -168,7 +163,6 @@ function updateTotalProgress(value) {
   bar.style.width = `${Number(value * 100)}%`;
   if (Number(value) === 1) {
     bar.classList += " bg-success";
-    clearInterval(interval_id);
   }
 }
 

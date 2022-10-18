@@ -115,7 +115,7 @@ async function cachesize(memory, clock) {
   finder.postMessage({
     module: module2,
     memory: memory,
-    large: !document.getElementById("lowMemory").checked,
+    large: true,
   });
 }
 
@@ -135,9 +135,9 @@ async function tlbsize(memory, clock) {
         profiler_results.push(msg.points);
         profiler_chart_types.push("/plot/line/");
 
-        nextProfiler("Timer precision over time");
+        nextProfiler("Number of Cores");
         if (stop) return;
-        calculatePrecision(memory, clock);
+        run(1, 2, 97777);
         break;
       default:
     }
