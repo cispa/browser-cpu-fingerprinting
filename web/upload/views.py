@@ -30,6 +30,8 @@ classifiers['L2CacheSizes'] = load(
     BASE_DIR / '../classification/.cache/classifiers/L2CacheSizes.dump')
 classifiers['L3CacheSizes'] = load(
     BASE_DIR / '../classification/.cache/classifiers/L3CacheSizes.dump')
+classifiers['L3Presence'] = load(
+    BASE_DIR / '../classification/.cache/classifiers/L3Presence.dump')
 classifiers['L1Associativities'] = load(
     BASE_DIR / '../classification/.cache/classifiers/L1Associativities.dump')
 classifiers['AMDvsIntel'] = load(
@@ -250,6 +252,10 @@ def upload(request):
             classifiers['L3CacheSizes'].predict([l3_data]))[0])
         predictions['L3CacheSizesproba'] = list(
             classifiers['L3CacheSizes'].predict_proba([l3_data]))[0][list(classifiers['L3CacheSizes'].classes_).index(predictions['L3CacheSizes'])]
+        predictions['L3Presence'] = int(list(
+            classifiers['L3Presence'].predict([l3_data]))[0])
+        predictions['L3Presenceproba'] = list(
+            classifiers['L3Presence'].predict_proba([l3_data]))[0][list(classifiers['L3Presence'].classes_).index(predictions['L3Presence'])]
         predictions['L1Associativities'] = int(list(
             classifiers['L1Associativities'].predict([l1asso_data]))[0])
         predictions['L1Associativitiesproba'] = list(

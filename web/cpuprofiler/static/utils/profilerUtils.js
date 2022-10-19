@@ -146,36 +146,51 @@ async function createChartsAndUpload() {
     throw new Error("Unexpected response");
   } else {
     let predictions = await success.json();
+    console.log(predictions);
 
     // actual predictions
     document.getElementById("l1").innerText =
       predictions["L1CacheSizes"] + " KB";
     document.getElementById("l2").innerText =
       predictions["L2CacheSizes"] + " KB";
-    document.getElementById("l3").innerText =
-      predictions["L3CacheSizes"] + " MB";
     document.getElementById("l1asso").innerText =
       predictions["L1Associativities"];
     document.getElementById("cores").innerText = predictions["NumberofThreads"];
-    document.getElementById("vendor").innerText = predictions["AMDvsIntel"];
     document.getElementById("uarch").innerText =
       predictions["Microarchitectures"];
     document.getElementById("model").innerText =
       predictions["Modelswithexecutiontimes"];
+
+    if (predictions["L3Presence"]) {
+      document.getElementById("l3").innerText =
+        predictions["L3CacheSizes"] + " MB";
+      document.getElementById("l3proba").innerText =
+        predictions["L3CacheSizesproba"].toFixed(2);
+    } else {
+      document.getElementById("l3").innerText = " - ";
+      document.getElementById("l3proba").innerText =
+        predictions["L3Presenceproba"].toFixed(2);
+    }
+
+    if (predictions["M1vsRest"] != "Apple M1") {
+      document.getElementById("vendor").innerText = predictions["AMDvsIntel"];
+      document.getElementById("vendorproba").innerText =
+        predictions["AMDvsIntelproba"].toFixed(2);
+    } else {
+      document.getElementById("vendor").innerText = "Apple";
+      document.getElementById("vendorproba").innerText =
+        predictions["M1vsRestproba"].toFixed(2);
+    }
 
     // confidence
     document.getElementById("l1proba").innerText =
       predictions["L1CacheSizesproba"].toFixed(2);
     document.getElementById("l2proba").innerText =
       predictions["L2CacheSizesproba"].toFixed(2);
-    document.getElementById("l3proba").innerText =
-      predictions["L3CacheSizesproba"].toFixed(2);
     document.getElementById("l1assoproba").innerText =
       predictions["L1Associativitiesproba"].toFixed(2);
     document.getElementById("coresproba").innerText =
       predictions["NumberofThreadsproba"].toFixed(2);
-    document.getElementById("vendorproba").innerText =
-      predictions["AMDvsIntelproba"].toFixed(2);
     document.getElementById("uarchproba").innerText =
       predictions["Microarchitecturesproba"].toFixed(2);
     document.getElementById("modelproba").innerText =
