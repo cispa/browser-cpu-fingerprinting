@@ -9,9 +9,6 @@ import base64
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import hashlib
-import os
-import dotenv
 from decouple import Config, RepositoryEnv
 from pathlib import Path
 from joblib import load
@@ -35,6 +32,17 @@ classifiers['L3CacheSizes'] = load(
     BASE_DIR / '../classification/.cache/classifiers/L3CacheSizes.dump')
 classifiers['L1Associativities'] = load(
     BASE_DIR / '../classification/.cache/classifiers/L1Associativities.dump')
+classifiers['AMDvsIntel'] = load(
+    BASE_DIR / '../classification/.cache/classifiers/AMDvsIntel.dump')
+classifiers['Microarchitectures'] = load(
+    BASE_DIR / '../classification/.cache/classifiers/Microarchitectures.dump')
+classifiers['Microarchitecturesgroupedbydesign'] = load(
+    BASE_DIR / '../classification/.cache/classifiers/Microarchitecturesgroupedbydesign.dump')
+classifiers['NumberofThreads'] = load(
+    BASE_DIR / '../classification/.cache/classifiers/NumberofThreads.dump')
+classifiers['Modelswithexecutiontimes'] = load(
+    BASE_DIR / '../classification/.cache/classifiers/Modelswithexecutiontimes.dump')
+
 
 def line_graph(points):
     fig = matplotlib.figure.Figure()
@@ -136,6 +144,64 @@ def prepare_l1(cachesize_benchmark_small):
     return tmp
 
 
+def prepare_l2(cachesize_benchmark_small, cachesize_benchmark_large):
+    tmp = []
+    for d in cachesize_benchmark_small:
+        tmp += [d['y']]
+    for d in cachesize_benchmark_large:
+        tmp += [d['y']]
+    return tmp
+
+
+def prepare_l3(cachesize_benchmark_small, cachesize_benchmark_large):
+    tmp = []
+    for d in cachesize_benchmark_small:
+        tmp += [d['y']]
+    for d in cachesize_benchmark_large:
+        tmp += [d['y']]
+    return tmp
+
+
+def prepare_l1asso(cacheasso_benchmark):
+    tmp = []
+    for d in cacheasso_benchmark:
+        tmp += [d['y']]
+    return tmp
+
+
+def prepare_cores(cores):
+    tmp = []
+    for d in cores[:17]:
+        tmp += [d['y']]
+    return tmp
+
+
+def prepare_uarch(cachesize_benchmark_small, cachesize_benchmark_large, cacheasso_benchmark, tlb_benchmark, cores):
+    tmp = []
+    for d in cacheasso_benchmark[:17:2]:
+        tmp += [d['y']]
+    for d in cachesize_benchmark_small[3::2]:
+        tmp += [d['y']]
+    for d in cachesize_benchmark_large:
+        tmp += [d['y']]
+    for d in tlb_benchmark[::2]:
+        tmp += [d['y']]
+    for d in cores[:17]:
+        tmp += [d['y']]
+    return tmp
+
+
+def prepare_amd_vs_intel(cachesize_benchmark_small, cachesize_benchmark_large, tlb_benchmark):
+    tmp = []
+    for d in cachesize_benchmark_small[3::2]:
+        tmp += [d['y']]
+    for d in cachesize_benchmark_large:
+        tmp += [d['y']]
+    for d in tlb_benchmark[::2]:
+        tmp += [d['y']]
+    return tmp
+
+
 @require_http_methods(["POST"])
 def upload(request):
     body_unicode = request.body.decode('utf-8')
@@ -144,8 +210,8 @@ def upload(request):
     times = body.get('times', [])
 
     try:
-        # assert len(benchmark_results) == 5
-        # assert len(times) == 5
+        assert len(benchmark_results) == 5
+        assert len(times) == 5
         cacheasso_benchmark = benchmark_results[0]
         cachesize_benchmark_small = benchmark_results[1]
         cachesize_benchmark_large = benchmark_results[2]
@@ -155,12 +221,59 @@ def upload(request):
         M1vsRest_data = prepare_M1vsRest(
             cacheasso_benchmark, cachesize_benchmark_small, cachesize_benchmark_large, tlb_benchmark, cores)
         l1_data = prepare_l1(cachesize_benchmark_small)
+        l2_data = prepare_l2(cachesize_benchmark_small,
+                             cachesize_benchmark_large)
+        l3_data = prepare_l3(cachesize_benchmark_small,
+                             cachesize_benchmark_large)
+        l1asso_data = prepare_l1asso(cacheasso_benchmark)
+        cores_data = prepare_cores(cores)
+        uarch_data = prepare_uarch(
+            cachesize_benchmark_small, cachesize_benchmark_large, cacheasso_benchmark, tlb_benchmark, cores)
+        vendor_data = prepare_amd_vs_intel(
+            cachesize_benchmark_small, cachesize_benchmark_large, tlb_benchmark)
 
+        # i am deeply sorry
         predictions = dict()
         predictions['M1vsRest'] = list(
             classifiers['M1vsRest'].predict([M1vsRest_data]))[0]
+        predictions['M1vsRestproba'] = list(
+            classifiers['M1vsRest'].predict_proba([M1vsRest_data]))[0][list(classifiers['M1vsRest'].classes_).index(predictions['M1vsRest'])]
         predictions['L1CacheSizes'] = int(list(
             classifiers['L1CacheSizes'].predict([l1_data]))[0])
+        predictions['L1CacheSizesproba'] = list(
+            classifiers['L1CacheSizes'].predict_proba([l1_data]))[0][list(classifiers['L1CacheSizes'].classes_).index(predictions['L1CacheSizes'])]
+        predictions['L2CacheSizes'] = int(list(
+            classifiers['L2CacheSizes'].predict([l2_data]))[0])
+        predictions['L2CacheSizesproba'] = list(
+            classifiers['L2CacheSizes'].predict_proba([l2_data]))[0][list(classifiers['L2CacheSizes'].classes_).index(predictions['L2CacheSizes'])]
+        predictions['L3CacheSizes'] = int(list(
+            classifiers['L3CacheSizes'].predict([l3_data]))[0])
+        predictions['L3CacheSizesproba'] = list(
+            classifiers['L3CacheSizes'].predict_proba([l3_data]))[0][list(classifiers['L3CacheSizes'].classes_).index(predictions['L3CacheSizes'])]
+        predictions['L1Associativities'] = int(list(
+            classifiers['L1Associativities'].predict([l1asso_data]))[0])
+        predictions['L1Associativitiesproba'] = list(
+            classifiers['L1Associativities'].predict_proba([l1asso_data]))[0][list(classifiers['L1Associativities'].classes_).index(predictions['L1Associativities'])]
+        predictions['AMDvsIntel'] = list(
+            classifiers['AMDvsIntel'].predict([vendor_data]))[0]
+        predictions['AMDvsIntelproba'] = list(
+            classifiers['AMDvsIntel'].predict_proba([vendor_data]))[0][list(classifiers['AMDvsIntel'].classes_).index(predictions['AMDvsIntel'])]
+        predictions['Microarchitectures'] = list(
+            classifiers['Microarchitectures'].predict([uarch_data]))[0]
+        predictions['Microarchitecturesproba'] = list(
+            classifiers['Microarchitectures'].predict_proba([uarch_data]))[0][list(classifiers['Microarchitectures'].classes_).index(predictions['Microarchitectures'])]
+        predictions['Microarchitecturesgroupedbydesign'] = list(
+            classifiers['Microarchitecturesgroupedbydesign'].predict([uarch_data]))[0]
+        predictions['Microarchitecturesgroupedbydesignproba'] = list(
+            classifiers['Microarchitecturesgroupedbydesign'].predict_proba([uarch_data]))[0][list(classifiers['Microarchitecturesgroupedbydesign'].classes_).index(predictions['Microarchitecturesgroupedbydesign'])]
+        predictions['NumberofThreads'] = int(list(
+            classifiers['NumberofThreads'].predict([cores_data]))[0])
+        predictions['NumberofThreadsproba'] = list(
+            classifiers['NumberofThreads'].predict_proba([cores_data]))[0][list(classifiers['NumberofThreads'].classes_).index(predictions['NumberofThreads'])]
+        predictions['Modelswithexecutiontimes'] = list(
+            classifiers['Modelswithexecutiontimes'].predict([times]))[0]
+        predictions['Modelswithexecutiontimesproba'] = list(
+            classifiers['Modelswithexecutiontimes'].predict_proba([times]))[0][list(classifiers['Modelswithexecutiontimes'].classes_).index(predictions['Modelswithexecutiontimes'])]
 
         return HttpResponse(json.dumps(predictions), status=200)
     except Exception as ex:

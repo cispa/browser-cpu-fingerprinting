@@ -8,17 +8,15 @@
 
 {% csrf_token %}
 
-<div style="display: flex; justify-content: center; padding-bottom: 3rem;">
-  <div>
-    <h5 style="padding-left: 2rem; padding-right: 2rem; padding-top: 3rem">
-      Checklist
-    </h5>
-    <ul class="list-group">
-      <li class="list-group-item">RAM Capacity above 6GB</li>
-      <li class="list-group-item">Connect mobile devices to a charger</li>
-      <li class="list-group-item">Leave this tab open in the foreground</li>
-    </ul>
-  </div>
+<div class="container" style="width: 50%; margin-bottom: 3rem;">
+  <h5 style="padding-left: 2rem; padding-right: 2rem; padding-top: 3rem">
+    Checklist
+  </h5>
+  <ul class="list-group">
+    <li class="list-group-item">RAM Capacity above 6GB</li>
+    <li class="list-group-item">Connect mobile devices to a charger</li>
+    <li class="list-group-item">Leave this tab open in the foreground</li>
+  </ul>
 </div>
 
 <div style="display: flex; justify-content: center;">
@@ -48,7 +46,7 @@
   </button>
 </div>
 
-<div class="container">
+<div class="container" style="width: 70%;">
   <div class="container-lg" style="margin: 0, auto; padding-bottom: 1rem">
     <p style="text-align: center">Total Progress</p>
     <div class="progress">
@@ -65,7 +63,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" style="width: 70%;">
   <div class="container-lg" style="margin: 0, auto; padding-bottom: 3rem">
     <p style="text-align: center">Current Benchmark</p>
     <div class="progress">
@@ -96,22 +94,59 @@
   <strong>Uploading results...</strong>
 </div>
 
-<div class="container" id="resultcontainer" hidden>
-  <div
-    style="margin-bottom: 1rem; text-align: center"
-    class="alert alert-success"
-    role="alert"
-  >
-    Everything was successful! Thank you very much! ❤️
-  </div>
-  <div
-    style="margin-bottom: 2rem; text-align: center"
-    class="alert alert-primary"
-    role="alert"
-    id="code"
-  >
-    <strong>Your Surveycode: </strong>
-  </div>
-  <div class="accordion" id="resultAccordion"></div>
+<div class="container" id="resultcontainer" hidden style="width: 70%;">
+  <h3>Predictions</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Prediction</th>
+        <th scope="col">Confidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">L1 Cache Size</th>
+        <td id="l1"></td>
+        <td id="l1proba"></td>
+      </tr>
+      <tr>
+        <th scope="row">L2 Cache Size</th>
+        <td id="l2"></td>
+        <td id="l2proba"></td>
+      </tr>
+      <tr>
+        <th scope="row">L3 Cache Size</th>
+        <td id="l3"></td>
+        <td id="l3proba"></td>
+      </tr>
+      <tr>
+        <th scope="row">L1 Cache Associativity</th>
+        <td id="l1asso"></td>
+        <td id="l1assoproba"></td>
+      </tr>
+      <tr>
+        <th scope="row">Number of Threads</th>
+        <td id="cores"></td>
+        <td id="coresproba"></td>
+      </tr>
+      <tr>
+        <th scope="row">Vendor</th>
+        <td id="vendor"></td>
+        <td id="vendorproba"></td>
+      </tr>
+      <tr>
+        <th scope="row">Microarchitecture</th>
+        <td id="uarch"></td>
+        <td id="uarchproba"></td>
+      </tr>
+      <tr>
+        <th scope="row">Model</th>
+        <td id="model"></td>
+        <td id="modelproba"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="accordion" id="resultAccordion" style="margin-top: 3rem;"></div>
 </div>
 {% endblock %}

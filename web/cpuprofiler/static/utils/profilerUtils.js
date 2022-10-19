@@ -1,7 +1,7 @@
 const bufferSize = 64 * 1024 * 1024;
 const wasmPageSize = 64 * 1024;
 const amountOfPages = bufferSize / wasmPageSize;
-const VERBOSE = false;
+const VERBOSE = true;
 
 function log(...s) {
   var output = document.getElementById("result-container");
@@ -145,7 +145,41 @@ async function createChartsAndUpload() {
   if (success.status != 200) {
     throw new Error("Unexpected response");
   } else {
-    document.getElementById("code").innerHTML += await success.text();
+    let predictions = await success.json();
+
+    // actual predictions
+    document.getElementById("l1").innerText =
+      predictions["L1CacheSizes"] + " KB";
+    document.getElementById("l2").innerText =
+      predictions["L2CacheSizes"] + " KB";
+    document.getElementById("l3").innerText =
+      predictions["L3CacheSizes"] + " MB";
+    document.getElementById("l1asso").innerText =
+      predictions["L1Associativities"];
+    document.getElementById("cores").innerText = predictions["NumberofThreads"];
+    document.getElementById("vendor").innerText = predictions["AMDvsIntel"];
+    document.getElementById("uarch").innerText =
+      predictions["Microarchitectures"];
+    document.getElementById("model").innerText =
+      predictions["Modelswithexecutiontimes"];
+
+    // confidence
+    document.getElementById("l1proba").innerText =
+      predictions["L1CacheSizesproba"].toFixed(2);
+    document.getElementById("l2proba").innerText =
+      predictions["L2CacheSizesproba"].toFixed(2);
+    document.getElementById("l3proba").innerText =
+      predictions["L3CacheSizesproba"].toFixed(2);
+    document.getElementById("l1assoproba").innerText =
+      predictions["L1Associativitiesproba"].toFixed(2);
+    document.getElementById("coresproba").innerText =
+      predictions["NumberofThreadsproba"].toFixed(2);
+    document.getElementById("vendorproba").innerText =
+      predictions["AMDvsIntelproba"].toFixed(2);
+    document.getElementById("uarchproba").innerText =
+      predictions["Microarchitecturesproba"].toFixed(2);
+    document.getElementById("modelproba").innerText =
+      predictions["Modelswithexecutiontimesproba"].toFixed(2);
   }
 
   document.getElementById("waitingcontainer").hidden = true;
